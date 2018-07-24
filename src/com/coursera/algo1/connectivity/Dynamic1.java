@@ -2,13 +2,13 @@ package com.coursera.algo1.connectivity;
 
 public class Dynamic1 implements DynamicConnectable{
 	
-	private Integer[] maze;
+	private Integer[] arr;
 	private int size = 5;
 	
 	public Dynamic1(int size){
-		maze = new Integer[size];
+		arr = new Integer[size];
 		for(int i=0; i<size;i++){			
-			maze[i] = i;			
+			arr[i] = i;			
 		}		
 	}
 	
@@ -18,17 +18,17 @@ public class Dynamic1 implements DynamicConnectable{
 
 	@Override
 	public boolean isConnected(int a, int b) {
-		return (maze[a]==maze[b]);
+		return (arr[a]==arr[b]);
 				
 	}
 
 	@Override
 	public void union(int a, int b) {
 		if(!isConnected(a,b)){
-			Integer val = maze[a];
-			maze[a] = maze[b];
+			Integer val = arr[a];
+			arr[a] = arr[b];
 			for(int j=0; j<size; j++ ){
-				if(maze[j]==val) maze[j]= maze[b];
+				if(arr[j]==val) arr[j] = arr[b];
 			}
 		}			
 	}
@@ -36,7 +36,7 @@ public class Dynamic1 implements DynamicConnectable{
 	@Override
 	public void print() {
 		
-		for(int i: maze){
+		for(int i: arr){
 			System.out.print(i + " ");
 		}
 		System.out.println();
