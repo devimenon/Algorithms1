@@ -34,8 +34,7 @@ public class StackArray implements Collection{
 		// TODO Auto-generated method stub
 		pos=(pos==0)?0:pos-1;
 		String val = arr[pos];
-		arr[pos]=null;
-		
+		arr[pos]=null;		
 		return val;
 	}
 

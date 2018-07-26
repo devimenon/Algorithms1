@@ -8,7 +8,7 @@ public interface Collection {
 	
 	void remove(String str);
 	
-	String remove();
+	String remove() throws Exception;
 	
 	void print();
 	
