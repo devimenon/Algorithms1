@@ -19,7 +19,7 @@ public class Queue implements Collection {
 			//tail.node=new Node(str);
 			Node tail = new Node(str);
 			ptr.node = tail;
-			ptr =tail;
+			ptr = tail;
 		}
 	}
 	
