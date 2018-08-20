@@ -1,5 +1,10 @@
 package com.coursera.algo1.sort;
 
+/** 1st sort
+ * @author devi
+ *
+ * 
+ */
 public class InsertionSort<T extends Comparable<T>> extends Sort<T>{
 	
 	InsertionSort(T[] arr) {
@@ -7,12 +12,13 @@ public class InsertionSort<T extends Comparable<T>> extends Sort<T>{
 	}
 
 	void sort(){
-		for(int i=0; i<arr.length;i++){
+		for(int i=0; i<arr.length ;i++){
 			
 			for(int j=i; j>0;j--){
 				
 				if(less(arr[j],arr[j-1])){
 					exchange(j,j-1);	
+					print();
 				}
 			}			
 		}

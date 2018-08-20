@@ -1,5 +1,10 @@
 package com.coursera.algo1.sort;
 
+/** 2nd sort
+ * @author devi
+ *
+ * 
+ */
 public class SelectionSort<T extends Comparable<T>> {
 	T arr[];
 	SelectionSort(T []arr){
@@ -14,9 +19,12 @@ public class SelectionSort<T extends Comparable<T>> {
 				if(less(val,arr[j])){
 					val = arr[j];
 					pos=j;
+					
 				}			
 			}
-			exchange(i,pos);			
+			exchange(i,pos);
+			print();
+			
 		}	
 	}
 	

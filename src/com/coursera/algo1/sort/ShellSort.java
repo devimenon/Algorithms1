@@ -11,36 +11,34 @@ public class ShellSort<T extends Comparable<T>> extends Sort<T> {
 	@Override
 	void sort() {		
 		for(int step : sortLength){
-			sortShell(step);
+			System.out.println("sort: "+step);
+			sort(step);
 		}
 			
 	}
 	
-	void sortShell(int step){
-		System.out.println(" -- "+step);	
-		for(int i=0; i<arr.length;i+=step){
-			
-			for(int j=i; j>0;j-=step){
-				
+	void sort(int step){
+		for(int i = 0; i< arr.length;i++){
+			for(int j=i+step;(j > 0 && 0 <= j-step && j < arr.length);j-=step){
 				if(less(arr[j],arr[j-step])){
-					
-					
-					System.out.println("i="+i);
-					System.out.println("j="+j);
-					exchange(j,j-step);
+					exchange(j,j-step);	
 					print();
 				}
-			}			
+				
+			}
 		}
 	}
 	
+	
 	public static void main(String[] args) {
-		ShellSort<Integer> intArray = new ShellSort<Integer>(new Integer[]{12, 6,3,4,1,24,7, 2,19,14,5}, new int[] {5,2});
-		intArray.sort();
-		intArray.print();
-		/*ShellSort<String> strArray = new ShellSort<String>(new String[]{"new", "test", "of", "sort", "this", "algo", "always", "difficult", "i", "think"},new int[] {7,4,2,1});
-		strArray.sort();
-		strArray.print();*/
+		
+		ShellSort<Character> chrArray = new ShellSort<Character> (new Character[] {'m','o','l','e','e','x','a','s','p','r','t'},new int[] {3,1});
+		//chrArray.sort();
+		//chrArray.print();
+		
+		//chrArray = new ShellSort<Character> (new Character[] {'s','h','e','l','l','s','o','r','t','e','x','a','m','p','l','e'}, new int[]{13,4,1});
+		chrArray.sort();
+		chrArray.print();
 	}
 
 }
