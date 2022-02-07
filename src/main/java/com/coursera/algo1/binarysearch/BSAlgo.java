@@ -2,8 +2,6 @@ package com.coursera.algo1.binarysearch;
 
 import java.util.Random;
 
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
-
 public class BSAlgo {
 
 	Integer [] arr;
