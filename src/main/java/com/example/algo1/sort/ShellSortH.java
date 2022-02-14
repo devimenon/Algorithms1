@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
 
 import java.util.Arrays;
 
@@ -8,12 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 public class ShellSortH{
 	String[] arrStr;
 	
-	ShellSortH(String[] arrStr) {
+	public ShellSortH(String[] arrStr) {
 		this.arrStr = arrStr;
 		
 	}
 	
-	void sort() {
+	public void sort() {
 		/*int len = arrStr.length/2;
 		while(len > 0) {
 			log.info("h increment: {}", len);
@@ -24,7 +24,7 @@ public class ShellSortH{
 		log.info("h increment: {}", 3);sort(3);
 		log.info("h increment: {}", 1);sort(1);
 	}
-	void sort(int h) {
+	public void sort(int h) {
 
 		for(int i = 0; i<arrStr.length;i++) {
 			
@@ -49,7 +49,7 @@ public class ShellSortH{
 		return arrStr[i].compareTo(arrStr[j]) ;
 		
 	}
-	void print() {
+	public void print() {
 		log.info(Arrays.toString(arrStr));
 	}
 

@@ -1,13 +1,13 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort.mergenquick;
 
 public class MergeSort extends SortAlgoGeneric<String>{
 
-	MergeSort(String[] givenArr) {
+	public MergeSort(String[] givenArr) {
 		super(givenArr);
 	}
 
 	//works
-	void sort1(int mid) {
+	public void sort1(int mid) {
 		String[] temp = new String[arr.length];
 		for(int i=0;i<arr.length;i++) {
 			temp[i]=arr[i];
@@ -23,7 +23,7 @@ public class MergeSort extends SortAlgoGeneric<String>{
 	}
 	
 	//works as in algo video
-	void merge(String[] a, String[] aux, int lo, int mid, int hi) {
+	public void merge(String[] a, String[] aux, int lo, int mid, int hi) {
 		for(int i=lo;i<=hi;i++) {
 			aux[i]=a[i];
 		}
@@ -64,7 +64,7 @@ public class MergeSort extends SortAlgoGeneric<String>{
 	}
 	
 	@Override
-	void sort() {
+	public void sort() {
 		// TODO Auto-generated method stub
 		sort(arr, new String[arr.length],0, arr.length-1);
 		

@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort.mergenquick;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,17 +8,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MergeSortObject<T extends Comparable<T>> {
 
-	T[] arr;
-	MergeSortObject(T[] array) {
+	public T[] arr;
+	public MergeSortObject(T[] array) {
 		this.arr = array;
 	}
 
-	void print() {
+	public void print() {
 		log.info(Arrays.toString(arr));
 	}
 	
 	//works as in algo video
-	void merge(Comparator<T> comparator, T[] a, T[] aux, int lo, int mid, int hi) {
+	public void merge(Comparator<T> comparator, T[] a, T[] aux, int lo, int mid, int hi) {
 		for(int i=lo;i<=hi;i++) {
 			aux[i]=a[i];
 		}
@@ -32,7 +32,7 @@ public class MergeSortObject<T extends Comparable<T>> {
 		}
 	}
 
-	void sort(Comparator<T> comparator, T[] a, T[] aux, int lo, int hi) {
+	public void sort(Comparator<T> comparator, T[] a, T[] aux, int lo, int hi) {
 		if( hi <= lo) return;
 		int mid = lo + (hi-lo)/2;
 		sort(comparator, a, aux, lo, mid);
@@ -41,11 +41,11 @@ public class MergeSortObject<T extends Comparable<T>> {
 	}
 	
 	
-	void sort(T[] array, T[] aux, Comparator<T> comparator) {
+	public void sort(T[] array, T[] aux, Comparator<T> comparator) {
 		sort(comparator, array, aux, 0, array.length-1);
 	}
 	
-	int compare(Comparator<T> comparator, T[] array, int i, int j) {
+	public int compare(Comparator<T> comparator, T[] array, int i, int j) {
 		return comparator.compare(array[i], array[j]);
 	}
 

@@ -2,6 +2,16 @@ package com.example.algo1.searchsort;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.algo1.sort.InsertionSort;
+import com.example.algo1.sort.SelectionSort;
+import com.example.algo1.sort.ShellSortH;
+import com.example.algo1.sort.mergenquick.MergeSort;
+import com.example.algo1.sort.mergenquick.QuickSelection;
+import com.example.algo1.sort.mergenquick.QuickSort;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class SortTest {
 	@Test
 	void selectionSortTest() {
@@ -67,7 +77,7 @@ public class SortTest {
 	}
 	
 	@Test
-	void partitionTest() {
+	void quickSortTest() {
 		String[] arr = "QUICKSORTEXAMPLE".split("");
 		QuickSort qs = new QuickSort(arr);
 		qs.print();
@@ -75,4 +85,24 @@ public class SortTest {
 		//qs.partition(arr,0,1,arr.length-1);
 		qs.print();
 	}
+	
+	@Test
+	void quickSortSelectionTest() {
+		String[] arr = "QUICKSORTEXAMPLE".split("");
+		QuickSelection qs = new QuickSelection(arr);
+		qs.print();
+		log.info(qs.select(9));
+		//qs.partition(arr,0,1,arr.length-1);
+		qs.print();
+	}
+	
+	@Test
+	void threewaySortTest() {
+		String[] arr = "QUICKSORTEXAMPLE".split("");
+		QuickSelection qs = new QuickSelection(arr);
+		qs.print();
+		qs.sort();
+		qs.print();
+	}
+	
 }

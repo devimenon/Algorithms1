@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
 
 public class InsertionSort extends SortAlgo{
 
@@ -6,11 +6,11 @@ public class InsertionSort extends SortAlgo{
 		super(size);
 	}
 
-	InsertionSort(int[] arr) {
+	public InsertionSort(int[] arr) {
 		super(arr);
 	}
 	@Override
-	void sort() {
+	public void sort() {
 
 		for(int i = 0; i<arr.length;i++) {
 			

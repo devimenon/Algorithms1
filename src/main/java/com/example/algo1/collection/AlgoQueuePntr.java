@@ -1,5 +1,7 @@
 package com.example.algo1.collection;
 
+import java.util.Iterator;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -62,5 +64,6 @@ public class AlgoQueuePntr implements AlgoCollPntr {
 	public void print() {
 		log.info("Node: {}, size: {}", node, size);
 	}
+
 
 }

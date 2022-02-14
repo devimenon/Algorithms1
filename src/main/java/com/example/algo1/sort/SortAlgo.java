@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -8,15 +8,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public abstract class SortAlgo {
 
-	int[] arr;
+	public int[] arr;
 	
-	abstract void sort();
+	public abstract void sort();
 	
-	void print() {
+	public void print() {
 		log.info(Arrays.toString(arr));
 	}
 	
-	SortAlgo(int size){
+	public SortAlgo(int size){
 		Random rand = new Random();
 		arr = new int[size];
 		for(int i=0;i<size;i++) {
@@ -24,10 +24,10 @@ public abstract class SortAlgo {
 		}
 		log.info(Arrays.toString(arr));
 	}
-	SortAlgo(int[] givenArr){
+	public SortAlgo(int[] givenArr){
 		this.arr=givenArr;
 	}
-	void exchange(int i, int j) {
+	public void exchange(int i, int j) {
 		int temp=arr[i];
 		arr[i]=arr[j];
 		arr[j]=temp;

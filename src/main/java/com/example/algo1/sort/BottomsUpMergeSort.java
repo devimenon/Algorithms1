@@ -1,4 +1,6 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
+
+import com.example.algo1.sort.mergenquick.SortAlgoGeneric;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,7 +12,7 @@ public class BottomsUpMergeSort extends SortAlgoGeneric<String>{
 	}
 	
 	//works as in algo video
-	void merge(String[] a, String[] aux, int lo, int mid, int hi) {
+	public void merge(String[] a, String[] aux, int lo, int mid, int hi) {
 		for(int i=lo;i<=hi;i++) {
 			aux[i]=a[i];
 		}
@@ -24,7 +26,7 @@ public class BottomsUpMergeSort extends SortAlgoGeneric<String>{
 		}
 	}
 
-	void sort() {
+	public void sort() {
 		String[] aux = new String[arr.length];
 		for(int i = 1; i< arr.length; i=i*2) {
 			for(int j=0;j<arr.length;j+=i) {

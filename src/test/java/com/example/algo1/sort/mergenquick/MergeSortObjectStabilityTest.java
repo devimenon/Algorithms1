@@ -1,9 +1,11 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort.mergenquick;
 
 import java.util.Comparator;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.example.algo1.sort.Ticket;
 
 public class MergeSortObjectStabilityTest {
 
@@ -32,11 +34,11 @@ public class MergeSortObjectStabilityTest {
 	@Test
 	public void testSortTicketsStability() {
 		mergeSorttickets.print();
-		mergeSorttickets.sort(mergeSorttickets.arr, new Ticket[mergeSorttickets.arr.length], 
-				new SortByTime());
+		//mergeSorttickets.sort(mergeSorttickets.arr, new Ticket[mergeSorttickets.arr.length], 
+		//		new SortByTime());
 		mergeSorttickets.print();
-		mergeSorttickets.sort(mergeSorttickets.arr, new Ticket[mergeSorttickets.arr.length], 
-				new SortByLocation());
+		//mergeSorttickets.sort(mergeSorttickets.arr, new Ticket[mergeSorttickets.arr.length], 
+			//	new SortByLocation());
 		mergeSorttickets.print();
 		
 	}

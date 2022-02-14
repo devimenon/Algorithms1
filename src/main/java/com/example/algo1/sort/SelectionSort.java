@@ -1,4 +1,4 @@
-package com.example.algo1.searchsort;
+package com.example.algo1.sort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -13,11 +13,11 @@ public class SelectionSort extends SortAlgo{
 		super(size);
 	}
 
-	SelectionSort(int[] arr) {
+	public SelectionSort(int[] arr) {
 		super(arr);
 	}
 	
-	void sort() {
+	public void sort() {
 		for(int i=0; i<arr.length;i++) {
 			int min=i;
 			for(int j=i+1;j<arr.length;j++) {
